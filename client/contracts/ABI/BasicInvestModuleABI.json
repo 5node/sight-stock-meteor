@@ -129,41 +129,6 @@
 		"constant": false,
 		"inputs": [
 			{
-				"name": "_startTime",
-				"type": "uint256"
-			},
-			{
-				"name": "_endTime",
-				"type": "uint256"
-			},
-			{
-				"name": "_cap",
-				"type": "uint256"
-			},
-			{
-				"name": "_max_investors",
-				"type": "uint256"
-			},
-			{
-				"name": "_from",
-				"type": "address"
-			}
-		],
-		"name": "configure",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
 				"name": "_granularity",
 				"type": "uint256"
 			}
@@ -177,6 +142,20 @@
 		],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "fundsWallet",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -314,6 +293,45 @@
 		],
 		"payable": false,
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_startTime",
+				"type": "uint256"
+			},
+			{
+				"name": "_endTime",
+				"type": "uint256"
+			},
+			{
+				"name": "_cap",
+				"type": "uint256"
+			},
+			{
+				"name": "_max_investors",
+				"type": "uint256"
+			},
+			{
+				"name": "_fundsReceiver",
+				"type": "address"
+			},
+			{
+				"name": "_from",
+				"type": "address"
+			}
+		],
+		"name": "configure",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -674,8 +692,8 @@
 				"type": "address"
 			}
 		],
-		"payable": true,
-		"stateMutability": "payable",
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
 	{
