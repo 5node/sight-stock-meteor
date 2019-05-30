@@ -1,3 +1,7 @@
+#topNav .navbar-brand{
+    color: rgba(0,0,0,0.5);
+    font-weight:bold;
+}
 #topNav .proposal_btn_wrap{
     margin-right: 20px;
 }
@@ -11,4 +15,22 @@
 }
 #topNav .dropdown .dropdown-menu .nav-item{
     color : inherit;
+}
+
+#navbarNavAltMarkup{
+    justify-content: flex-end;
+}
+
+#topNav .navbar-nav a, #topNav .nav-link{
+    margin-right: 8px;
+    font-size: 17px;
+    color : rgba(0,0,0,0.4);
+}
+#topNav .nav-link .fa{
+    margin-right: 2px;
+}
+
+#topNav .active{
+    font-weight:bold;
+    color:#000;
 }

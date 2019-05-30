@@ -6,7 +6,8 @@ import '../login/login.js';
 Template.topnavbar.helpers({
     currentUserName(){
         return Meteor.user().profile.name;
-    }
+    },
+
 });
 
 

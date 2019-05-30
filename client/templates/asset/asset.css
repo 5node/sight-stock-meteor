@@ -2,10 +2,11 @@
 .custom-card.card{
     position: relative;
     width: 20em;
-    height: 27em;
+    height: 25em;
     overflow: hidden;
     border-radius: 1em;
-    background:url('http://sumeyyaarar.com/wp-content/uploads/2018/07/empty_baslik.png') no-repeat center;
+    background: #eee;
+    /*background:url('http://sumeyyaarar.com/wp-content/uploads/2018/07/empty_baslik.png') no-repeat center ;*/
 }
 .custom-card.card img{
     width: 100%;
@@ -50,8 +51,8 @@
     border-radius: 10px;
 }
 
-/* */
-#assetDetail .btn-block{
+/* asset detail,fund detail  */
+#assetDetail .btn-block, #fundDetail .btn-block{
     position:absolute;
     bottom:0;
     left:0;
@@ -64,4 +65,14 @@
     padding: 7px;
     color:#007bff;
     border-radius: 7px;
+}
+
+/* fund Detail */
+#fundDetail .avatar {
+    width: 100px;
+    height: 100px;
+}
+#fundDetail .avatar img{
+    width: 100%;
+    height: 100%;
 }
