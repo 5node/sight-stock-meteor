@@ -27,7 +27,9 @@
             <!-- 간략소개 -->
             <div class="col-lg-7">
 
-				<p>{{description}}</p>
+                <h3 class="font-weight-bold mb-3"><strong>{{title}}</strong></h3>
+
+                <p>{{description}}</p>
 				<div>
 				<!-- TODO: Tag-dynamic -->
 				{{#each tags}}
@@ -41,7 +43,7 @@
 					{{score}}
 					<span style='font-weight: bolder; font-size: 1.5em'>{{scoreNum}} 점</span>
 
-                    <span class="float-right" style="font-size: 1.5em; font-weight: bolder;">3 KLAY</span>
+                    <span class="float-right" style="font-size: 1.5em; font-weight: bolder;">{{contentUsingCost}} KLAY</span>
                 </div>
 
                 <div style="width: 100%;">
