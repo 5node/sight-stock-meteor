@@ -1,5 +1,6 @@
 <template name="fundDetailPage">
 
+    {{>fundDetail}}
     <div>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
@@ -12,8 +13,9 @@
     </div>
 
     <div class="tab-content" id="myTabContent">
+
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            {{>fundDetail}}
+
         </div>
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             {{>commentList}}

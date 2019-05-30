@@ -1,10 +1,11 @@
 <template name="funding">
-
-    <nav aria-label="breadcrumb">
+    {{isActiveRoute regex='funding/total'}}
+    <!--{{isActiveRoute regex='funding'}}-->
+    <nav class="breadcrumb_wrap" aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">전체</a></li>
-            <li class="breadcrumb-item"><a href="#">진행중</a></li>
-            <li class="breadcrumb-item"><a href="#">완료</a></li>
+            <li class="breadcrumb-item active"><a href="#none">전체</a></li>
+            <li class="breadcrumb-item "><a href="#none">진행중</a></li>
+            <li class="breadcrumb-item "><a href="#none">완료</a></li>
         </ol>
     </nav>
 

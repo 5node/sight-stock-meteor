@@ -18,11 +18,7 @@ Template.assetItem.events({
 
 
 Template.assetItem.onRendered(function() {
-    $('img.lazy').lazyload({
-        effect : "fadeIn"
-    });
-
-})
+});
 
 
 Template.assetItem.onCreated(function () {

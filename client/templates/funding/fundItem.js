@@ -22,7 +22,8 @@ Template.fundItem.events({
     'click div[name=fund-card]' (evt,tmpl){
 
         Session.set("CurrentContentId",this._id);
-        FlowRouter.go("/fundDetailPage");
+
+        FlowRouter.go("/fundDetail?id=" + tmpl.data._id);
     },
 
 });

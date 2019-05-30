@@ -1,7 +1,7 @@
 <template name="fundingList">
 
 
-    <div class="container up-down-padding-4">
+    <div class="container">
         <div class="card-columns">
             {{#each list}}
                 {{>fundItem}}
@@ -9,12 +9,7 @@
         </div>
     </div>
 
-    <div class="container">
-        <div align="center">
-
-            <button name="more" type="button" class="btn btn-secondary btn-lg btn-block">
-                <i class="glyphicon glyphicon-arrow-down"></i> 더보기
-            </button>
-        </div>
+    <div align="center" style="padding-top:20px;">
+        <i class="fa fa-spinner fa-spin"></i>
     </div>
 </template>

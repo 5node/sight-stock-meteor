@@ -28,6 +28,21 @@ FlowRouter.route('/funding', {
     action: renderLayout('funding')
 });
 
+FlowRouter.route('/funding/total', {
+    name: 'funding',
+    action: renderLayout('funding')
+});
+
+FlowRouter.route('/funding/progress', {
+    name: 'funding',
+    action: renderLayout('funding')
+});
+
+FlowRouter.route('/funding/completed', {
+    name: 'funding',
+    action: renderLayout('funding')
+});
+
 FlowRouter.route('/mypage', {
     name: 'mypage',
     action: renderLayout('mypage')
@@ -40,7 +55,7 @@ FlowRouter.route('/assetDetail', {
 });
 
 
-FlowRouter.route('/fundDetailPage', {
+FlowRouter.route('/fundDetail', {
     name: 'fundDetailPage',
     action: renderLayout('fundDetailPage')
 });

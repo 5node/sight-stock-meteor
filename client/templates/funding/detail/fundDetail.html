@@ -1,6 +1,5 @@
 <template name="fundDetail">
     <div id="fundDetail">
-        <hr class="my-5">
 
         <!-- 대표이미지 & 간략소개 row -->
         <div class="row">
@@ -31,7 +30,7 @@
                 {{/each}}
 
                 <!-- Post title -->
-                <h3 class="font-weight-bold mb-3"><strong>{{content.contentName}}</strong></h3>
+                <h3 class="font-weight-bold mb-3 title"><strong>{{content.contentName}}</strong></h3>
 
                 <p>
                     {{content.contentDesc}}
@@ -39,7 +38,7 @@
 
                 <div class="group">
                     <div class="progress">
-                        <span class="progress_current" style="width:{{fundPercent }}%">{{fundPercent}}%</span>
+                        <span class="progress_current" style="width:{{ fundPercent }}%" title="{{fundPercent}}%">{{ fundPercent}}%</span>
                         <div class="progress-bar bg-info" role="progressbar" style="width: {{fundPercent}}%;" aria-valuenow="{{fundPercent}}" aria-valuemin="0" aria-valuemax="100">{{fundPercent}}%</div>
                     </div>
 

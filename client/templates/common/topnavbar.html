@@ -7,8 +7,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a style="padding: 6px;" class="nav-item btn-link {{isActiveRoute regex='asset'}}" href="{{pathFor 'asset'}}"><i class="fa fa-image"></i>ASSET</a>
-                    <a style="padding: 6px;" class="nav-item btn-link {{isActiveRoute regex='funding'}}" href="{{pathFor 'funding'}}"><i class="fas fa-search-dollar"></i>FUNDING</a>
+                    <a style="padding: 6px;" class="nav-item btn-link {{isActiveRoute regex='asset'}} {{isActiveRoute regex='assetDetail'}}" href="{{pathFor 'asset'}}"><i class="fa fa-image"></i>ASSET</a>
+                    <a style="padding: 6px;" class="nav-item btn-link {{isActiveRoute regex='funding'}} {{isActiveRoute regex='fundDetail'}}" href="{{pathFor 'funding/total'}}"><i class="fas fa-search-dollar"></i>FUNDING</a>
                 </div>
             </div>
             <div class="form-inline my-2 my-lg-0">

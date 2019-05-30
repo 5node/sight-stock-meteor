@@ -8,7 +8,11 @@ Template.funding.helpers({
 });
 
 Template.funding.events({
-
+    "click .breadcrumb-item" : function(e) {
+        e.stopPropagation();
+        $('.breadcrumb-item').removeClass('active');
+         $(e.target).addClass('active');
+    }
 });
 
 Template.funding.onRendered(function() {

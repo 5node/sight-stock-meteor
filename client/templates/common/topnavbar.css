@@ -25,9 +25,13 @@
     margin-right: 8px;
     font-size: 17px;
     color : rgba(0,0,0,0.4);
+    text-decoration:none;
 }
-#topNav .nav-link .fa{
-    margin-right: 2px;
+#topNav .navbar-nav .active, #topNav .nav-link .active{
+    color:#000;
+}
+#topNav .nav-item .fa{
+    margin-right: 3px;
 }
 
 #topNav .active{
