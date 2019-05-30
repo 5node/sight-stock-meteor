@@ -3,7 +3,7 @@ import {Template} from "meteor/templating";
 
 Template.fundingList.helpers({
     list(){
-        return Content.find({},{});
+        return Content.find({contentStatus:"진행중"},{});
     }
 });
 

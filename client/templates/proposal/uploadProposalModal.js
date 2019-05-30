@@ -61,30 +61,52 @@ Template.uploadProposalModal.events({
 
     //파일 업로드
 
-    'change input[data-proposal="thumbnail"]' (e,t) {
-        const filename = e.target.value;
+    'change input[data-proposal="thumbnail"]' (e,tmpl) {
 
-        $(e.target).next('.custom-file-label').html(filename);
+        var fileReader = new FileReader();
+        var fileName = e.currentTarget.files[0].name ;
+        var file = e.currentTarget.files[0];
+
+        fileReader.onload = (file) => {
+            var image = {
+                resource: file.srcElement.result,
+                name: fileName,
+                encoding: 'binary',
+            };
+            console.log(image);
+
+            // 다음은 image 를 서버로 던지기 구현
+            Meteor.call('saveFile', image, function (err, result) {
+                if (err) {
+                    alert(err);
+                } else {
+                    $(e.target).next('.custom-file-label').html(result.fileName);
+                    tmpl.tempImage.set(result.fileName);
+                }
+            });
+        };
+        fileReader.readAsBinaryString(file);
+
     },
     //submit
-    'submit #proposalForm': async function (e) {
+    'submit #proposalForm': async function (e, tmpl) {
         e.preventDefault();
-		const thumbnail = $('#proposalThumbnail')[0].files[0];
-		const thumbnailreader = new FileReader();
-		function readFileAsync(file) {
-			return new Promise((resolve, reject) => {
-			  let reader = new FileReader();
-
-			  reader.onload = () => {
-				resolve(reader.result);
-			  };
-
-			  reader.onerror = reject;
-
-			  reader.readAsDataURL(file);
-			})
-		  }
-		const thumbnailBinary = await readFileAsync(thumbnail);
+		// const thumbnail = $('#proposalThumbnail')[0].files[0];
+		// const thumbnailreader = new FileReader();
+		// function readFileAsync(file) {
+		// 	return new Promise((resolve, reject) => {
+		// 	  let reader = new FileReader();
+        //
+		// 	  reader.onload = () => {
+		// 		resolve(reader.result);
+		// 	  };
+        //
+		// 	  reader.onerror = reject;
+        //
+		// 	  reader.readAsDataURL(file);
+		// 	})
+		//   }
+		// const thumbnailBinary = await readFileAsync(thumbnail);
         const title = $('input[name="title"]')[0].value;
         const issuePrice = $('input[name="issuePrice"]')[0].value;
         const issueCount = $('input[name="issueCount"]')[0].value;
@@ -106,7 +128,7 @@ Template.uploadProposalModal.events({
         const param = {
 			contentStatus: '진행중',
             contentTag: hashTagList,
-            contentThumbnail: thumbnailBinary,
+            // contentThumbnail: thumbnailBinary,
             contentName:title,
             contentParValue: issuePrice,
             contentTotalSupply: issueCount,
@@ -115,6 +137,12 @@ Template.uploadProposalModal.events({
 			contentDesc: description,
 			contentCreator: profile,
 		}
+
+		console.log(tmpl.tempImage.get()!="");
+
+        if(tmpl.tempImage.get()!=""){
+            param["image"] = tmpl.tempImage.get();
+        }
 
         Meteor.call('insertContentProposal', param ,(err,data)=>{
             if(err){
@@ -155,6 +183,7 @@ Template.uploadProposalModal.onCreated(function () {
 });
 
 Template.uploadProposalModal.onRendered(function () {
+    this.tempImage = new ReactiveVar("");
 
 });
 

@@ -16,6 +16,11 @@ Template.assetDetail.helpers({
 		var content = Content.findOne({_id: id})
 		return content.contentName
 	},
+	usingCost(){
+		var id = getQueryString('id')
+		var content = Content.findOne({_id: id})
+		return content.contentUsingCost
+	},
     resourceList(){
 		var id = getQueryString('id')
 		var content = Content.findOne({_id: id})
@@ -47,12 +52,12 @@ Template.assetDetail.helpers({
 		var score = content.contentScore
 		var out = ''
 		for(var i = 0; i < 5; i++){
-			if (score >= 20){
+			if (score >= 2){
 				out += '<span class="fa fa-star"></span>'
-				score -= 20
-			} else if (score >= 10) {
+				score -= 2
+			} else if (score >= 1) {
 				out += '<span class="fa fa-star-half-o"></span>'
-				score -= 10
+				score -= 1
 			} else {
 				out += '<span class="fa fa-star-o"></span>'
 			}

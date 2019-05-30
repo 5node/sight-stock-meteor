@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import './rest';
 import "/imports/collections";//추가
 import "./publications/Content";//추가
 import './methods/Content';

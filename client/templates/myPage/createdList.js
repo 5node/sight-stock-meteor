@@ -6,6 +6,8 @@ Template.createdList.helpers({
         let creatorId = sessionStorage.getItem("userId");
         // let creatorId = "charles@gmail.com";
 
+        console.log(creatorId);
+
         return Content.find({"contentCreator.userId": creatorId},{});
     },
 });
@@ -26,10 +28,10 @@ Template.createdList.events({
     'click button[name=c-modal]' (evt,tmpl){
 
         console.log("modal id check - ", this._id);
-		Session.set("editItem",this._id);
+        sessionStorage.setItem("editItem",this._id);
 	},
-	'click .upload' (evt,tmpl){
-		Session.set("uploadItem", this._id)
+	'click button[name=resourceUpBtn]' (evt,tmpl){
+		sessionStorage.setItem("uploadItem", this._id)
 	}
 });
 

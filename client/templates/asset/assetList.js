@@ -4,8 +4,7 @@ import "/imports/collections";//추가
 
 Template.assetList.helpers({
     list(){
-        console.log(Content.find({}, {}))
-        return Content.find({},{});
+        return Content.find({contentStatus:"완료"},{});
     }
 });
 
