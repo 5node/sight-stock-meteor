@@ -21,11 +21,7 @@
 
                 {{#if currentUser}}
                 <!-- user 로그인했을대 -->
-                    {{#if isCreator}}
-                        <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#proposeCreatorModal">
-                            제작자 신청
-                        </a>
-                    {{/if}}
+
 
                     <div>
                         <div class="dropdown">
@@ -33,6 +29,11 @@
                                 {{currentUserName}}
                             </span>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                {{#if isCreator}}
+                                <a class="nav-item nav-link" href="#none" data-toggle="modal" data-target="#proposeCreatorModal">
+                                    제작자 신청
+                                </a>
+                                {{/if}}
                                 <a class="nav-item nav-link {{isActiveRoute regex='widgets'}}" href="{{pathFor 'mypage'}}">마이페이지</a>
                                 <a class="nav-item nav-link KlaytnLogOutButton">로그아웃</a>
                             </div>
