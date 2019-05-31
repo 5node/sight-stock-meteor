@@ -1,6 +1,5 @@
 import {Template} from "meteor/templating";
 import "/imports/collections";//추가
-import {caver, provider} from "../../caver";
 import config from "../../../contracts/config.json"; 
 import BasicPurchaseModuleABI from "../../../contracts/ABI/BasicPurchaseModuleABI.json";
 import {ethers} from "ethers";
