@@ -2,10 +2,26 @@ import {Template} from "meteor/templating";
 import "/imports/collections";//추가
 import '../login/login.js';
 import {caver} from "../caver.js";
+import {ethers} from "ethers";
 
+let klay;
 
-
+Meteor.startup(async() => {
+    // const walletFromSession = sessionStorage.getItem("walletInstance");
+    // if(walletFromSession){
+        let userPk = sessionStorage.getItem("pk");
+        let provider = new ethers.providers.JsonRpcProvider('https://api.baobab.klaytn.net:8651');
+        let wallet = new ethers.Wallet(userPk, provider);
+        klay = await wallet.getBalance();
+        klay = klay / 1e18;
+        klay = klay.toFixed(2);
+    // }
+});
 Template.topnavbar.helpers({
+    
+    klay() {
+        return klay;
+    },
     currentUserName(){
         return Meteor.user().profile.name;
     },
