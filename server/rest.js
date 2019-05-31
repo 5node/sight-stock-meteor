@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor'
 import fs from 'fs';
 
-const TEMP_FILE_PATH = '/Users/charles/Project/temp/';
-const IMAGE_FILE_PATH = '/Users/charles/Project/images/';
+const TEMP_FILE_PATH = '/Users/berk/Project/temp/';
+const IMAGE_FILE_PATH = '/Users/berk/Project/images/';
 
 WebApp.connectHandlers.use("/temp", (req, res, next)=>{
 
