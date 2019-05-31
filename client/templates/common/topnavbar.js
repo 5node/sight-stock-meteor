@@ -4,7 +4,7 @@ import '../login/login.js';
 import {caver} from "../caver.js";
 import {ethers} from "ethers";
 
-let klay;
+
 
 Meteor.startup(async() => {
     // const walletFromSession = sessionStorage.getItem("walletInstance");
@@ -12,15 +12,18 @@ Meteor.startup(async() => {
         let userPk = sessionStorage.getItem("pk");
         let provider = new ethers.providers.JsonRpcProvider('https://api.baobab.klaytn.net:8651');
         let wallet = new ethers.Wallet(userPk, provider);
-        klay = await wallet.getBalance();
+        let klay = await wallet.getBalance();
         klay = klay / 1e18;
         klay = klay.toFixed(2);
+        
+        Session.set("klay",klay);
     // }
 });
+
 Template.topnavbar.helpers({
     
     klay() {
-        return klay;
+        return Session.get("klay");;
     },
     currentUserName(){
         return Meteor.user().profile.name;

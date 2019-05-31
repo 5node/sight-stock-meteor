@@ -31,7 +31,6 @@ Template.login.events({
                 sessionStorage.setItem("pk", password);
                 sessionStorage.setItem("walletInstance",JSON.stringify(walletInstance));
                 sessionStorage.setItem("userId", email);
-
                 FlowRouter.go("/");
 
             } else {

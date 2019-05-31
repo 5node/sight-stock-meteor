@@ -87,8 +87,7 @@ Template.fundDetail.events({
                     alert('서버에러 => ' + err.error);
                 }else{
                     if (data > 0) {
-                        alert("투자한 KLAY 수 - " + klayVal + "/n" +
-                                "보유하게 된 STOCK 수 " + stockVal);
+                        alert("you invested!!");
                     }
                 }
             });
