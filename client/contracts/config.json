@@ -1,9 +1,9 @@
 {
-    "SigStockRegistry" : "0xb9dbbf86e156aede99a4522af1dd1f6fe53c7a31",
-    "ProductExample1" : "0x93abf9ec0682b398cb01a95222c50ef367764c30",
-    "BasicInvestModule" : "0x22f4be52cf7ecd19c6bad1b53ad70030c24a4db6",
-    "BasicPurchaseModule" : "0x7e49d62cb6db98113f172d198b604cac77bc011b",
-    "BasicDivideModule" : "0xb198b9b0e63e762699b91a85a201304d35a4f2e9",
-    "deloyedAddress" : "0x22e1adc8e62860c0148b2ce35f6cc2f8ddf2245c",
-    "deployedAddressPK" : "0x84ecb3a575cc6d50170b71fb6d6d76c9ad6e1de402a7adb5f5243ef92c2e5e2c"
+    "SigStockRegistry" : "0x26ea8b38714d563ee2c1494a9adbc3a57570962d",
+    "ProductExample1" : "0x2d86d78bf6dacb305c7ff1d03cb36295a33edb74",
+    "BasicInvestModule" : "0xa01ce4554ef9004bcb9564579c5c595500862ffe",
+    "BasicPurchaseModule" : "0x74e7f0b1dee2e8387ff5e3c651cf359405e657cb",
+    "BasicDivideModule" : "0x336c7b55972e263ad25daded8138a6ff0a91b2d9",
+    "deloyedAddress" : "0x6441a3b2f1a28ceaf1702b387bb4f9499608352e",
+    "deployedAddressPK" : "0xb78782366630dd1bb36bd19f2bf85fc419e5c10e514bcb2c8affd71f027479d4"
 }

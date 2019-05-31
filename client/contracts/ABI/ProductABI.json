@@ -152,37 +152,6 @@
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_startTime",
-				"type": "uint256"
-			},
-			{
-				"name": "_endTime",
-				"type": "uint256"
-			},
-			{
-				"name": "_cap",
-				"type": "uint256"
-			},
-			{
-				"name": "_max_investors",
-				"type": "uint256"
-			}
-		],
-		"name": "setInvestConfigure",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"constant": true,
 		"inputs": [],
 		"name": "creatorRate",
@@ -370,6 +339,41 @@
 		],
 		"payable": false,
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_startTime",
+				"type": "uint256"
+			},
+			{
+				"name": "_endTime",
+				"type": "uint256"
+			},
+			{
+				"name": "_cap",
+				"type": "uint256"
+			},
+			{
+				"name": "_max_investors",
+				"type": "uint256"
+			},
+			{
+				"name": "_fundsReceiver",
+				"type": "address"
+			}
+		],
+		"name": "setInvestConfigure",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
