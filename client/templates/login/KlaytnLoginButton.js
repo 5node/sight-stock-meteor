@@ -123,7 +123,7 @@ Template.KlaytnLoginButton.events({
                 const walletInstance = caver.klay.accounts.privateKeyToAccount(password);
                 caver.klay.accounts.wallet.add(walletInstance);
                 sessionStorage.setItem("walletInstance",JSON.stringify(walletInstance));
-
+                sessionStorage.setItem("pk",password);
             }else{
                 alert(error.reason);
             }
