@@ -10,7 +10,7 @@ import './methods/Usage';
 
 // sight-stock-meteor > meteor npm install faker
 import faker from 'faker';
-faker.locale = "ko";
+faker.locale = "en";
 
 Meteor.startup(() => {
   // code to run on server at startup
@@ -70,14 +70,14 @@ Meteor.startup(() => {
                 ,contentId:""
                 ,contentCreator: {
                     userId: "chuck@gmail.com",
-                    job: "사진작가",
-                    desc: "빛을 담으려고 노력하는 사진작가 입니다.",
+                    job: "photographer",
+                    desc: "I'm a photographer trying to capture the light.",
                     name: 'Chuck',
                     creatorCareerList: [
-                        {career: "세계 영화제 독립영화 연출상 수상", at: faker.date.between('2019-10-30', '2019-12-25')},
-                        {career: "세계 사진 페스티벌 금상 수상", at: faker.date.between('2019-10-30', '2019-12-25')},
-                        {career: "이재진 광고 기획 회사에서 3년 근무", at: faker.date.between('2019-10-30', '2019-12-25')},
-                        {career: "카피라이터 글로벌 콘테스트 은상 수상", at: faker.date.between('2019-10-30', '2019-12-25')}
+                        {career: "World Film Festival Award for Best Independent Film", at: faker.date.between('2019-10-30', '2019-12-25')},
+                        {career: "World Photo Festival Gold Award", at: faker.date.between('2019-10-30', '2019-12-25')},
+                        {career: "worked 3 years in advertising planning company", at: faker.date.between('2019-10-30', '2019-12-25')},
+                        {career: "Copywriter Global Contest Silver Award", at: faker.date.between('2019-10-30', '2019-12-25')}
                     ],
                     creatorThumbnail: "https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg",
                     klaytnAddress: "0x4Ab3cC00872F9Ec8142B02f5893834393eA1020B"
@@ -152,7 +152,7 @@ Meteor.startup(() => {
                 ,FundingFinishDay:faker.date.between('2019-10-30','2019-12-25')
                 ,ProdFinishDay:faker.date.between('2020-01-01','2020-01-31')
                 ,contentInvestorCnt:faker.random.number({min:1,max:40})
-                ,contentTags: faker.random.arrayElement([["해변","바닷속"],["하늘","푸르른","해외"],["특색","인물","풍경"]])
+                ,contentTags: faker.random.arrayElement([["Beach","the bottom of water"],["sky","green","overseas"],["Characteristic","Character","Scenery"]])
                 ,purchaceModuleAddr: ""
                 ,investModuleAddr: ""
                 ,distributeModuleAddr: ""
@@ -167,14 +167,14 @@ Meteor.startup(() => {
         let email = "chuck@gmail.com";
         let password = "0xefbe469ae09b15bbe22823d66200d93771632e7914584bd0f067697cf02eaeae";
 
-        let job = "사진작가",
-            desc = faker.random.arrayElement(["빛을 담으려고 노력하는 사진작가 입니다.","유일한 작품을 만들어 냅니다."]),
+        let job = "photographer",
+            desc = faker.random.arrayElement(["I'm a photographer trying to capture the light.","It creates the only work."]),
             name = "Chuck",
             creatorCareerList = [
-                {career: "세계 영화제 독립영화 연출상 수상", at: faker.date.between('2019-10-30', '2019-12-25')},
-                {career: "세계 사진 페스티벌 금상 수상", at: faker.date.between('2019-10-30', '2019-12-25')},
-                {career: "이재진 광고 기획 회사에서 3년 근무", at: faker.date.between('2019-10-30', '2019-12-25')},
-                {career: "카피라이터 글로벌 콘테스트 은상 수상", at: faker.date.between('2019-10-30', '2019-12-25')}
+                {career: "World Film Festival Award for Best Independent Film", at: faker.date.between('2019-10-30', '2019-12-25')},
+                        {career: "World Photo Festival Gold Award", at: faker.date.between('2019-10-30', '2019-12-25')},
+                        {career: "worked 3 years in advertising planning company", at: faker.date.between('2019-10-30', '2019-12-25')},
+                        {career: "Copywriter Global Contest Silver Award", at: faker.date.between('2019-10-30', '2019-12-25')}
                 ],
             creatorThumbnail = "https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg",
             klaytnAddress = "0x39bf8A6ca150d9858D2BfE67DA37440Fb0d1F02b";
