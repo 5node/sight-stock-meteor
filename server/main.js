@@ -64,7 +64,7 @@ Meteor.startup(() => {
         for(let i = 0 ; i<12 ; i++){
 
             let dummyContent = {
-                contentStatus:faker.random.arrayElement(['On going','Finished'])
+                contentStatus:faker.random.arrayElement(['진행중','완료'])
                 ,contentThumbnail: fundThumbnail[i]
                 ,contentResourceList:shuffle(contentResourceUrlArr)
                 ,contentId:""
