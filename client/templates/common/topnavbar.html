@@ -18,7 +18,7 @@
 
                 {{#unless currentUser}}
                     <!-- user 로그인 안했을때  -->
-                    <a class="nav-item nav-link {{isActiveRoute regex='login'}}" href="{{pathFor 'login'}}">로그인</a>
+                    <a class="nav-item nav-link {{isActiveRoute regex='login'}}" href="{{pathFor 'login'}}">LOGIN</a>
                     <!--// user 로그인 안했을때  -->
                 {{/unless}}
 
@@ -34,11 +34,11 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 {{#if isCreator}}
                                 <a class="nav-item nav-link" href="#none" data-toggle="modal" data-target="#proposeCreatorModal">
-                                    제작자 신청
+                                    Apply Producer
                                 </a>
                                 {{/if}}
-                                <a class="nav-item nav-link {{isActiveRoute regex='widgets'}}" href="{{pathFor 'mypage'}}">마이페이지</a>
-                                <a class="nav-item nav-link KlaytnLogOutButton">로그아웃</a>
+                                <a class="nav-item nav-link {{isActiveRoute regex='widgets'}}" href="{{pathFor 'mypage'}}">MY PAGE</a>
+                                <a class="nav-item nav-link KlaytnLogOutButton">LOGOUT</a>
                             </div>
                         </div>
                     </div>

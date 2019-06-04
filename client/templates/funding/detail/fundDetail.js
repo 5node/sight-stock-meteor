@@ -40,14 +40,14 @@ Template.fundDetail.events({
         let content = Content.findOne({_id: Session.get("CurrentContentId")},{});
 
         if (klayVal == "" || klayVal == 0) {
-            alert("투자할 클레이를 입력해 주세요");
+            alert("Please enter KLAY to invest.");
             return;
         }
 
         if (content.contentTotalSupply <
             content.investedStock + stockVal) {
 
-            alert("더이상 투자를 하실 수 없습니다.");
+            alert("You can't invest any more.");
             return;
         }
 
@@ -84,7 +84,7 @@ Template.fundDetail.events({
             Meteor.call('investToContent', param ,(err,data)=>{
                 if(err){
                     console.log(err);
-                    alert('서버에러 => ' + err.error);
+                    alert('SERVER ERROR => ' + err.error);
                 }else{
                     if (data > 0) {
                         alert("you invested!!");
@@ -98,7 +98,7 @@ Template.fundDetail.events({
         let content = Content.findOne({_id: Session.get("CurrentContentId")},{});
 
         if (evt.currentTarget.value < 0) {
-            alert("최소 1주는 신청하셔야 합니다.");
+            alert("You have to apply for at least one share.");
             return;
         }
 

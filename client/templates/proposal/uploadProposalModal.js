@@ -118,7 +118,7 @@ Template.uploadProposalModal.events({
         // let creator = Meteor.users.findOne(Meteor.userId());
 
         if (!Meteor.user().profile.job) {
-            alert("제작자 신청을 하셔야 합니다.");
+            alert("You need to apply for a producer.");
             return;
         }
 
@@ -147,9 +147,9 @@ Template.uploadProposalModal.events({
         Meteor.call('insertContentProposal', param ,(err,data)=>{
             if(err){
                 console.log(err);
-                alert('서버에러 => ' + err.error);
+                alert('SERVER ERROR => ' + err.error);
             }else{
-                alert('업로드 되었습니다!')
+                alert('Uploaded.')
             }
         });
 

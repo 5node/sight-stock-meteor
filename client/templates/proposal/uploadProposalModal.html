@@ -4,7 +4,7 @@
             <div class="modal-content">
                 <form id="proposalForm" name="proposal">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">기획물 업로드 </h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Upload project </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -19,55 +19,55 @@
                             </colgroup>
                             <tbody>
                             <tr>
-                                <th scope="col">타이틀</th>
+                                <th scope="col">Title</th>
                                 <td colspan="3">
                                     <input type="text" class="form-control" name="title" placeholder="타이틀"/>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="col">썸네일</th>
+                                <th scope="col">Thumbnail</th>
                                 <td colspan="3">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" id="proposalThumbnail" data-proposal="thumbnail" />
-                                        <label class="custom-file-label" for="proposalThumbnail">파일선택</label>
+                                        <label class="custom-file-label" for="proposalThumbnail">Select File</label>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="col">액면가</th>
+                                <th scope="col">Par value</th>
                                 <td>
-                                    <input type="text" name="issuePrice" class="form-control" placeholder="예) 100" />
+                                    <input type="text" name="issuePrice" class="form-control" placeholder="ex) 100" />
                                 </td>
-                                <th scope="col">발행주식수</th>
+                                <th scope="col">Number of issued shares</th>
                                 <td>
-                                    <input type="text" name="issueCount" class="form-control" placeholder="예) 100"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="col">제작비용</th>
-                                <td>
-                                    <input type="text" name="prodCost" class="form-control" placeholder="예) 100" />
-                                </td>
-                                <th scope="col">사용가</th>
-                                <td>
-                                    <input type="text" name="usingCost" class="form-control" placeholder="예) 100"/>
+                                    <input type="text" name="issueCount" class="form-control" placeholder="ex) 100"/>
                                 </td>
                             </tr>
                             <tr>
-                                <th>설명</th>
+                                <th scope="col">Production cost</th>
+                                <td>
+                                    <input type="text" name="prodCost" class="form-control" placeholder="ex) 100" />
+                                </td>
+                                <th scope="col">Selling price</th>
+                                <td>
+                                    <input type="text" name="usingCost" class="form-control" placeholder="ex) 100"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Description</th>
                                 <td colspan="3">
                                     <textarea name="description" class="form-control" aria-label="With textarea"></textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <th>해시태그</th>
+                                <th>Hashtag</th>
                                 <td colspan="3">
                                     <div class="hashtags-wrapper">
                                         <div class="created">
                                         </div>
                                         <span>
                                             <input type="text" class="form-control" placeholder=""/>
-                                            <button class="btn btn-primary save_hastag" type="button" >저장</button>
+                                            <button class="btn btn-primary save_hastag" type="button" >SAVE</button>
                                         </span>
                                     </div>
                                 </td>
@@ -78,8 +78,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                        <button type="submit" class="btn btn-primary" data-upload="saveBtn">저장</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCLE</button>
+                        <button type="submit" class="btn btn-primary" data-upload="saveBtn">SAVE</button>
                     </div>
                 </form>
             </div>

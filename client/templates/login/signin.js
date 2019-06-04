@@ -15,7 +15,7 @@ Template.signin.events({
         var password = tmpl.find('input[name=privateKey]').value;
         var name     = tmpl.find('input[name=name]').value;
         if(!password) {
-            alert("패스워드를 확인하세요");
+            alert("Please check your password.");
             return;
         }
 
@@ -27,7 +27,7 @@ Template.signin.events({
             if(!!error){
                 alert(error.reason);
             }else{
-                alert("가입 성공");
+                alert("Sign-up successful");
                 $(tmpl.findAll('input')).val("");
 
                 const walletInstance = caver.klay.accounts.privateKeyToAccount(password);
@@ -47,7 +47,7 @@ Template.signin.events({
     "click [name=copyPrivateKey]" (evt,tmpl){
         tmpl.find('input[name=privateKey]').select();
         document.execCommand("copy");
-        alert("클립보드에 복사되었습니다.");
+        alert("Copied to clipboard.");
     },
     "click .goLogin" (evt,tmpl){
         tmpl.mode.set("login");

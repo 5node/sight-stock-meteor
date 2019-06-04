@@ -16,7 +16,7 @@ Template.usageList.helpers({
 Template.usageList.events({
 
     'click button[name=downloadBtn]'(evt, tmpl) {
-        alert("해당 기능은 구현되지 않았습니다.");
+        alert("The feature has not been implemented.");
     }
 });
 

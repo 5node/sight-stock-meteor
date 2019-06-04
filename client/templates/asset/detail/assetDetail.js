@@ -82,7 +82,7 @@ Template.assetDetail.events({
 
 
 		if (content.contentCreator.userId == userId) {
-			alert("제작자는 자신의 작품의 사용하기 기능을 이용하실 수 없습니다.");
+			alert("Producers are not allowed to use their work.");
 			return;
 		}
 		
@@ -115,14 +115,14 @@ Template.assetDetail.events({
 			Meteor.call('useContent', param ,(err,data)=>{
 				if(err){
 					console.log(err);
-					alert('서버에러 => ' + err.error);
+					alert('SERVER ERROR => ' + err.error);
 	
 				}else{
 					console.log(data);
 					if (data > 0) {
-						alert("3 Klay를 소진하여 해당 컨텐츠를 구매완료 하셨습니다.");
+						alert("You purchased the contents using 1 KLAY.");
 					} else {
-						alert("구매 완료 된 건이 없습니다.");
+						alert("No purchases have been completed.");
 					}
 				}
 			});

@@ -44,17 +44,17 @@
 
                 <div class="row col-lg-12" style="padding-top: 20px;">
                     <div class="col-md-4">
-                        <h6 class="grey-text txt-center mb-md-0 mb-5">달성률</h6>
+                        <h6 class="grey-text txt-center mb-md-0 mb-5">attainment rate</h6>
                         <h5 class="fund-txt txt-center my-4">{{fundPercent}} %</h5>
                     </div>
 
                     <div class="col-md-4">
-                        <h6 class="grey-text txt-center mb-md-0 mb-5">펀딩 모금액</h6>
+                        <h6 class="grey-text txt-center mb-md-0 mb-5">fund-raising Amount</h6>
                         <h5 class="fund-txt txt-center my-4">{{content.investedKlay}} Klay</h5>
                     </div>
 
                     <div class="col-md-4">
-                        <h6 class="grey-text txt-center mb-md-0 mb-5">투자자 수</h6>
+                        <h6 class="grey-text txt-center mb-md-0 mb-5">number of investors</h6>
                         <h5 class="fund-txt txt-center my-4">{{content.contentInvestorCnt}}</h5>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                     <input name="stockVal"
                            type="text" class="form-control"
                            value="1"
-                           placeholder="구매하고자 하는 주 수를 입력하세요."
+                           placeholder="Please enter the number of shares you want to purchase."
                            aria-label="Username" aria-describedby="basic-addon1">
 
                     <div class="input-group-prepend">
@@ -80,13 +80,13 @@
                            type="number" class="form-control"
                            value="1"
                            readonly
-                           placeholder="1 Klay = 1 주 입니다."
+                           placeholder="1 Klay = 1 stock."
                            aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div style="width: 100%">
                     <button class="btn btn-secondary btn-lg btn-block"
                             name="investBtn"
-                    >투 자 하 기</button>
+                    >INVEST</button>
                 </div>
 
 
@@ -102,28 +102,28 @@
 
             <section class="text-center my-5 col-lg-12">
 
-                <h2 class="h1-responsive font-weight-bold my-5">투자 기본정보</h2>
-                <p class="lead grey-text w-responsive mx-auto mb-5">해당 컨텐츠는 아래와 같은 투자조건을 내걸고 있습니다. 투자 시 꼭 참고하여 주시기 바랍니다.</p>
+                <h2 class="h1-responsive font-weight-bold my-5">Fundamental Information</h2>
+                <p class="lead grey-text w-responsive mx-auto mb-5">The content has these investment conditions. Please be sure to refer to the investment.</p>
 
                 <div class="row">
 
                 <div class="col-md-3">
-                    <h5 class="font-weight-bold my-4">전체 주식 수</h5>
-                    <h4 class="grey-text mb-md-0 mb-5">{{content.contentTotalSupply}} 개</h4>
+                    <h5 class="font-weight-bold my-4">Total Shares</h5>
+                    <h4 class="grey-text mb-md-0 mb-5">{{content.contentTotalSupply}} shares</h4>
                 </div>
 
                 <div class="col-md-3">
-                    <h5 class="font-weight-bold my-4">사용가</h5>
+                    <h5 class="font-weight-bold my-4">selling price</h5>
                     <h4 class="grey-text mb-md-0 mb-5">{{content.contentUsingCost}} KLAY</h4>
                 </div>
 
                 <div class="col-md-3">
-                    <h5 class="font-weight-bold my-4">액면가</h5>
+                    <h5 class="font-weight-bold my-4">The par value</h5>
                     <h4 class="grey-text mb-md-0 mb-5">{{content.contentParValue}} KLAY</h4>
                 </div>
 
                 <div class="col-md-3">
-                    <h5 class="font-weight-bold my-4">제작비용</h5>
+                    <h5 class="font-weight-bold my-4">Production Cost</h5>
                     <h4 class="grey-text mb-0">{{content.contentProdCost}} KLAY</h4>
                 </div>
 
@@ -139,8 +139,8 @@
         <div class="team-section my-5">
 
 
-            <h2 class="h1-responsive font-weight-bold text-center my-5">제작자 이력소개</h2>
-            <p class="grey-text text-center w-responsive mx-auto mb-5">SIGHT-STOCK의 제자작자들은 자체 심사기준을 통해 선발된, 검증된 전문가들 입니다.</p>
+            <h2 class="h1-responsive font-weight-bold text-center my-5">About the producer's resume</h2>
+            <p class="grey-text text-center w-responsive mx-auto mb-5">The producers of SIGHT-STOCK are qualified professionals selected through their own screening standards.</p>
 
             <div class="row text-center text-md-left">
 
@@ -179,8 +179,8 @@
         <div class="row">
             <section class="text-center my-5" style="margin:0 auto;">
 
-                <h2 class="h1-responsive font-weight-bold my-5">최근 제작물</h2>
-                <p class="dark-grey-text w-responsive mx-auto mb-5">해당 제작자가 최근 작업과 펀딩을 완료한 작품 목록입니다.</p>
+                <h2 class="h1-responsive font-weight-bold my-5">a recent production</h2>
+                <p class="dark-grey-text w-responsive mx-auto mb-5">A list of recent work and funding completed by the author.</p>
 
                 <div class="row">
 
@@ -198,12 +198,12 @@
 <!--    <div class="row">-->
         <section class="text-center my-5">
 
-            <h2 class="h1-responsive font-weight-bold my-5">기획 상세내용</h2>
-            <p class="dark-grey-text w-responsive mx-auto mb-5">해당 프로젝트를 어떻게 진행해 갈것이며, 각각의 일정에 맞춘 기대 작품을 설명합니다.</p>
+            <h2 class="h1-responsive font-weight-bold my-5">Planning details</h2>
+            <p class="dark-grey-text w-responsive mx-auto mb-5">How do you proceed with the project and describe the work that you expect to see on each schedule.</p>
 
             <div class="row">
 
-                <p class="dark-grey-text w-responsive mx-auto mb-5">( 기능 구현 생략 )</p>
+                <p class="dark-grey-text w-responsive mx-auto mb-5">( Skip function implementation )</p>
 
             </div>
 

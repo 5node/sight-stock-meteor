@@ -25,11 +25,11 @@ Template.investItem.events({
     	let score = tmpl.find('input[name=scoreInput_'+this._id+']').value;
 
 		if (score > 10) {
-			alert("평점은 10점을 넘을 수 없습니다.");
+			alert("The rating cannot exceed 10 points.");
 			return;
 		}
 		if (score < 3) {
-			alert("평점은 최소 3점 이상은 되어야 합니다.");
+			alert("The rating must be at least 3 points.");
 			return;
 		}
 
@@ -51,7 +51,7 @@ Template.investItem.events({
 		Meteor.call('updateToInvestScore', param ,(err,data)=>{
 			if(err){
 				console.log(err);
-				alert('서버에러 => ' + err.error);
+				alert('SERVER ERROR => ' + err.error);
 			}else{
 				console.log(data);
 			}

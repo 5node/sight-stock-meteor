@@ -79,9 +79,9 @@ Template.uploadProductionModal.events({
 		Meteor.call('insertContentResource', param ,(err,data)=>{
 			if(err){
 				console.log(err);
-				alert('서버에러 => ' + err.error);
+				alert('Server Error => ' + err.error);
 			}else{
-				alert(data+"개의 업로드를 완료하였습니다.");
+				alert("Upload completed.");
 			}
 		});
 		location.reload();

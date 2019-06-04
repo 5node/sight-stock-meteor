@@ -18,15 +18,15 @@ Template.proposeCreatorModal.events({
 
 
         if (!job) {
-            alert("직업을 입력하세요.");
+            alert("Please enter a job.");
             return;
         }
         if (!desc) {
-            alert("자기소개를 입력하세요.");
+            alert("Please enter a self-introduction.");
             return;
         }
         if (!careerList) {
-            alert("경력사항을 입력하세요.");
+            alert("Please enter your work experience.");
             return;
         }
 
@@ -47,10 +47,10 @@ Template.proposeCreatorModal.events({
         Meteor.call("addCreator", param ,(err,data)=> {
             if(err){
                 console.log(err);
-                alert('서버에러 => ' + err.error);
+                alert('SERVER ERROR => ' + err.error);
             }else{
 
-                alert("제작자가 되신걸 축하힙니다.");
+                alert("Congratulations on becoming the producer.");
             }
         })
 
