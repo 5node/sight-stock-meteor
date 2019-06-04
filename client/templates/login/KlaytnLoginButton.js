@@ -73,7 +73,7 @@ Template.KlaytnLoginButton.events({
     "click input[name=copyPrivateKey]" (evt,tmpl){
         tmpl.find('input[name=password]').select();
         document.execCommand("Copy");
-        alert("클립보드에 복사되었습니다.");
+        alert("Copied to clipboard.");
     }
     ,
     "click button[name=signUp]" (evt,tmpl){
@@ -81,7 +81,7 @@ Template.KlaytnLoginButton.events({
         var password = tmpl.find('input[name=password]').value;
         var name     = tmpl.find('input[name=name]').value;
         if(!password) {
-            alert("패스워드를 확인하세요");
+            alert("Check password");
             return;
         }
 
@@ -93,7 +93,7 @@ Template.KlaytnLoginButton.events({
             if(!!error){
                 alert(error.reason);
             }else{
-                alert("가입 성공");
+                alert("Success!");
                 $(tmpl.findAll('input')).val("");
 
                 Meteor.loginWithPassword(email,password,function(error){
