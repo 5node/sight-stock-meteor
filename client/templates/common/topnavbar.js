@@ -23,7 +23,7 @@ Meteor.startup(async() => {
 Template.topnavbar.helpers({
     
     klay() {
-        return Session.get("klay");;
+        return Session.get("klay") || 0;
     },
     currentUserName(){
         return Meteor.user().profile.name;

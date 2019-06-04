@@ -109,11 +109,12 @@ label.static:hover{ color: inherit; }
     content:"";
     padding:0;
 }
-#container .breadcrumb_wrap .breadcrumb .active{
+#container .breadcrumb_wrap .breadcrumb .breadcrumb-item.active{
     background-color:#eee;
 }
 
 #container .breadcrumb_wrap .breadcrumb .active a{
+    background-color: none;
     color:#000;
     font-weight:bold;
 }

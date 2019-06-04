@@ -14,6 +14,8 @@
     top:130%;
 }
 #topNav .dropdown .dropdown-menu .nav-item{
+    word-break:break-all;
+    font-size: 16px;
     color : inherit;
 }
 

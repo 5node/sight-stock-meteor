@@ -10,7 +10,7 @@
                     <a style="padding: 6px;" class="nav-item btn-link {{isActiveRoute regex='asset'}} {{isActiveRoute regex='assetDetail'}}" href="{{pathFor 'asset'}}">ASSET</a>
                     <a style="padding: 6px;" class="nav-item btn-link {{isActiveRoute regex='funding'}} {{isActiveRoute regex='fundDetail'}}" href="{{pathFor 'funding/total'}}">FUNDING</a>
                     {{#if currentUser}}
-                    <div style="padding: 6px; font-weight: bold" class="nav-item" > {{klay}} KLAY </div>
+                    <div style="padding: 6px; margin-right: 10px; font-weight: normal; color: rgba(0,0,0,0.4);" class="nav-item" > {{klay}} KLAY </div>
                     {{/if}}
                 </div>
             </div>
@@ -18,7 +18,7 @@
 
                 {{#unless currentUser}}
                     <!-- user 로그인 안했을때  -->
-                    <a class="nav-item nav-link {{isActiveRoute regex='login'}}" href="{{pathFor 'login'}}">LOGIN</a>
+                    <a class="nav-item nav-link {{isActiveRoute regex='login'}}" style="color: rgba(0,0,0,0.4)" href="{{pathFor 'login'}}">LOGIN</a>
                     <!--// user 로그인 안했을때  -->
                 {{/unless}}
 
